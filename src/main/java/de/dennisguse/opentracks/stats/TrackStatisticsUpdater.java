@@ -125,7 +125,7 @@ public class TrackStatisticsUpdater {
             currentSegment.setAverageHeartRate(HeartRate.of(averageHeartRateBPM));
         }
 
-        updateDistanceAndSpeed(trackPoint)
+        updateDistanceAndSpeed(trackPoint);
 
         if (trackPoint.isSegmentManualEnd()) {
             reset(trackPoint);
@@ -135,7 +135,6 @@ public class TrackStatisticsUpdater {
         lastTrackPoint = trackPoint;
     }
 
-    // Extracted method for updating total distance and speed
     private void updateDistanceAndSpeed(TrackPoint trackPoint) {
         Distance movingDistance = null;
         if (trackPoint.hasSensorDistance()) {
